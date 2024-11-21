@@ -26,7 +26,11 @@ This is a backend API built with Node.js and Express.js for managing school data
 ### API Endpoints
 1. POST
 ```bash
-schools/addSchool
+https://school-management-7a8a.onrender.com/schools/addSchool
+```
+HEADERS
+```bash
+Content-Type: application/json
 ```
 
 Description: Adds a new school to the database.
@@ -48,7 +52,12 @@ Response:
 Errors:
 If any field is missing or invalid, the server will respond with a 400 Bad Request error.
 
-2. GET schools/listAllSchools
+
+2. GET
+   
+   ```bash
+   https://school-management-7a8a.onrender.com/schools/listAllSchools
+   ```
 Description: Fetches all schools from the database.
 Response (JSON):
 ```bash
@@ -72,18 +81,18 @@ Response (JSON):
 }
 ```
 
-3. GET schools/listSchoolsNearby
+
+3. GET
+   
+   ```bash
+   https://school-management-7a8a.onrender.com/schools/listSchoolsNearBy?latitude=50&longitude=50
+   ```
 Description: Fetches a list of schools near the specified latitude and longitude.
 Query Parameters:
 latitude: Latitude of the user's location.
 longitude: Longitude of the user's location.
 Example Request:
 
-```bash
-
-GET /listSchoolsNearby?latitude=40.7128&longitude=-74.0060
-
-```
 Response (JSON):
 ```bash
 {
